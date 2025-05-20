@@ -1,0 +1,21 @@
+<plugin>
+    <groupId>org.pitest</groupId>
+    <artifactId>pitest-maven</artifactId>
+    <version>pitest-reactor</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-junit5-plugin</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+    </dependencies>
+    <configuration>
+        <mutators>
+            <mutator>STRONGER+REACTIVE</mutator>
+        </mutators>
+        <features>
+            <feature>+auto_threads</feature>
+        </features>
+        <timestampedReports>true</timestampedReports>
+    </configuration>
+</plugin>
